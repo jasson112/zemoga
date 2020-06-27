@@ -1,0 +1,7 @@
+app_home:
+    path: /
+    controller: FrameworkBundle:Redirect:redirect
+    options: { i18n: false }
+    defaults:
+        route: homepage
+        permanent: true

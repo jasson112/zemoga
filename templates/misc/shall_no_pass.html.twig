@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    {% set bg_img = util.img("section_search").image %}
+    {% set bg_color = util.config("section_search_color") %}
+    <div class="sectionTitle" style="background-image: url('{{ path_images ~ '/' ~ bg_img }}'); background-color: {{ bg_color }}">
+        <hr/>
+        <h1>{{ util.text("security_page") | raw }}</h1>
+        <hr/>
+    </div>
+    <div class="customContainer">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <iframe width="100%" height="700" src="{{ util.config("shall_no_pass") }}?rel=0&controls=0&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

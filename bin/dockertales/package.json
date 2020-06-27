@@ -1,0 +1,14 @@
+{
+  "name": "dockertales",
+  "version": "1.0.1",
+  "description": "docker command run",
+  "main": "./dockertales.js",
+  "author": "jasson rojas",
+  "license": "MIT",
+  "bin": {
+    "dockertales": "./dockertales.js"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.4"
+  }
+}

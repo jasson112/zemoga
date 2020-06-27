@@ -1,0 +1,41 @@
+###> symfony/framework-bundle ###
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/webpack-encore-pack ###
+/node_modules/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-pack ###
+# Created by .ignore support plugin (hsz.mobi)
+/.idea/
+/.vagrant/
+/impulse.box
+/php/.idea/
+!/var/jwt/
+*.zip
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###
+/composer.lock
+/symfony.lock
+/yarn.lock
+
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###
+/public/uploads2/
+
+###> symfony/webpack-encore-bundle ###
+###< symfony/webpack-encore-bundle ###
+/public/build/*
+/public/tmp/*
+/public/tmp/

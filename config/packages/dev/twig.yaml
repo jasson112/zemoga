@@ -1,0 +1,4 @@
+#twig:
+#    exception_controller: App\Controller\ExceptionController::exceptionAction
+twig:
+  cache: false

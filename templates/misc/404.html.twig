@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    {% set bg_img = util.img("section_404").image %}
+    {% set bg_color = util.config("section_404_color") %}
+    <div class="crumbs">
+        <span>{{ util.text("bread_home") }}</span>
+        <span>{{ util.text("bread_404") }}</span>
+    </div>
+    <div class="sectionTitle" style="background-image: url('{{ path_images ~ '/' ~ bg_img }}'); background-color: {{ bg_color }}">
+        <hr/>
+        <h1>{{ util.text("not_found") | raw }}</h1>
+        <hr/>
+    </div>
+    <div class="customContainer">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="blogSearch">
+                    <div class="homeSelect all_blog">
+                        <form action="{{ path('search_all') }}" method="get">
+                            <input placeholder="{{ util.text("search") }}" value="" name="search" class="selects"/>
+                            <button type="submit" class="selects">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="grayBoxTitle">
+                    <center><h1 class="smallBoldTitle">{{ util.text("page_not_found_title") }}</h1></center>
+                    <p>{{ util.textBig("page_not_found") | raw }}</p>
+                    {% set img = util.img("not_found")  %}
+                    <img class="lazy" data-src="{{ img.image }}" title="{{ img.title }}" alt="{{ img.alt }}" longdesc="{{ img.description }}" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

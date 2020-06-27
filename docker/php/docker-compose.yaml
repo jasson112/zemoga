@@ -1,0 +1,17 @@
+version: "3"
+
+networks:
+  default:
+    external:
+      name: zemoga_net
+
+services:
+  zemoga-php:
+    container_name: zemoga-php
+    build:
+      context: ../php/
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    volumes:
+      - ../../../zemoga:/usr/share/nginx/html/web:delegated

@@ -1,0 +1,18 @@
+version: "3"
+
+networks:
+  default:
+    external:
+      name: zemoga_net
+
+services:
+  zemoga-web:
+    container_name: zemoga-web
+    build:
+      context: ./nginx/
+      dockerfile: Dockerfile
+    ports:
+      - "5016:80"
+    volumes:
+      - ../../../zemoga:/usr/share/nginx/html/web:delegated
+      - ./nginx/logs:/var/log/nginx/

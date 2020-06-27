@@ -1,0 +1,45 @@
+{
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.22.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.4.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev-server": "encore dev-server",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production",
+    "zem-install": "dockertales && encore dev"
+  },
+  "dependencies": {
+    "acorn-dynamic-import": "^3.0.0",
+    "child_process": "^1.0.2",
+    "copy-webpack-plugin": "^4.5.2",
+    "core-js": "3",
+    "dockertales": "file:bin/dockertales",
+    "featherlight": "^1.7.13",
+    "fs": "^0.0.1-security",
+    "less": "^2.7.3",
+    "less-loader": "^4.1.0",
+    "normalize": "^0.3.1",
+    "normalize-css": "^2.3.1",
+    "normalize.css": "^8.0.0",
+    "popper.js": "^1.14.3",
+    "raw-loader": "^2.0.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.23.1",
+    "swiper": "^3.4.2",
+    "uglifycss": "0.0.27",
+    "url-loader": "^1.1.2",
+    "webfontloader": "^1.6.28"
+  }
+}
