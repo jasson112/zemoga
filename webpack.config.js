@@ -34,6 +34,7 @@ Encore
     })
     .enableVersioning()
     .enableLessLoader()
+    .enableSingleRuntimeChunk()
     .splitEntryChunks()
 ;
 

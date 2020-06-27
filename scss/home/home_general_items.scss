@@ -2,7 +2,6 @@ main{
   display: flex;
   flex-wrap: wrap;
   >section{
-    flex: 50% 0 0;
     justify-content: center;
     display: flex;
     flex-flow: column;
@@ -27,9 +26,20 @@ main{
     }
   }
   >aside{
-    flex: 50% 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+    }
   }
   >footer{
-    flex: 100% 0 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }

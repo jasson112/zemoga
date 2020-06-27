@@ -1,6 +1,6 @@
 How to run the project
 ===
-1. Requirements
+1. Requirements (MUST HAVE)
     - Yarn or NPM
     - Docker desktop
 2. 3rd party libraries
