@@ -30,14 +30,17 @@ class AppController  extends AbstractController
      */
     public function indexAction(Request $request)
     {
-        $user = $this->em->createQueryBuilder()
-            ->select('u')
-            ->from("App:User", 'u')
+        $portfolio = $this->em->createQueryBuilder()
+            ->select('p')
+            ->from("App:Portfolio", 'p')
             ->getQuery()
             ->useQueryCache(true)
             ->getOneOrNullResult();
-
-        return $this->render('app/home.html.twig', compact("user"));
+        if($portfolio){
+            $twitter = new TwitterZem($portfolio->getTwitterUsername());
+            $timeline = $twitter->getTimeLine();
+        }
+        return $this->render('app/home.html.twig', compact("portfolio", "timeline"));
     }
 
     /**

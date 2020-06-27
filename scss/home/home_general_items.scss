@@ -1,0 +1,35 @@
+main{
+  display: flex;
+  flex-wrap: wrap;
+  >section{
+    flex: 50% 0 0;
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    >figure{
+      >img{
+        width: 100%;
+      }
+    }
+    article{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      article{
+        width: 100%;
+        a{
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  >aside{
+    flex: 50% 0 0;
+  }
+  >footer{
+    flex: 100% 0 0;
+  }
+}

@@ -6,13 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="540">
+        {{ encore_entry_link_tags('style') }}
         {% block stylesheets %}{% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
     </head>
     <body>
-        {% include 'app/menu.html.twig' %}
         {% block content %}{% endblock %}
-        {% include 'app/footer.html.twig' %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

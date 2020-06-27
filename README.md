@@ -3,6 +3,9 @@ How to run the project
 1. Requirements
     - Yarn or NPM
     - Docker desktop
+3. 3rd party libraries
+    - recomended by twitter https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries
+        - im using a Community Library - *twitter-php by @DavidGrudl https://github.com/dg/twitter-php*
 2. Commands
     - in case of using yarn install all yarn dependencies in this way: 
         ```shell script
