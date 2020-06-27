@@ -4,7 +4,9 @@
 namespace App\Repository;
 
 
-class PortfolioRepository
+use Doctrine\ORM\EntityRepository;
+
+class PortfolioRepository extends EntityRepository
 {
 
 }

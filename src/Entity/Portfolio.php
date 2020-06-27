@@ -2,12 +2,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Portfolio
  *
  * @ORM\Table(name="`portfolio`")
  * @ORM\Entity(repositoryClass="App\Repository\PortfolioRepository")
+ * @ApiResource(formats={"json"})
  */
 class Portfolio
 {

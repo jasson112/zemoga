@@ -41,7 +41,8 @@ exec("docker network create zemoga_net", (error, stdout, stderr) => {
                                 console.log(`error: ${error.message}`);
                                 return;
                             }
-                            console.log(`! ┌( ಠ_ಠ)┘ ! Nice work now you can see the project at this address: http://localhost:5016 ! Enjoy !`);
+                            console.log(`! ┌( ಠ_ಠ)┘ ! Nice work now you can see the project step 1 at this address: http://localhost:5016 ! Enjoy !`);
+                            console.log(`! ┌( ಠ_ಠ)┘ ! Nice work now you can see the project step 2 at this address: http://localhost:5016/api ! Enjoy !`);
                         });
                     });
                 });
