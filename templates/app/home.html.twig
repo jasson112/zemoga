@@ -1,52 +1,57 @@
 {% extends 'base.html.twig' %}
 {% block content %}
 <main>
-    <section>
-        <figure>
+    <section class="portfolio__wrapper">
+        <figure class="portfolio__wrapper-img">
             <img src="{{ portfolio.imageUrl }}" alt="Portfolio image">
         </figure>
-        <article>
-            <h2>{{ portfolio.name }}'s Timeline</h2>
-            {% for item in timeline %}
-                {% if item.entities.urls | length > 0 or item.retweeted_status is not defined %}
-                    {% set line = {
-                        url: (item.entities.urls | first).url is not null ? (item.entities.urls | first).url : "#",
-                        text: item.text,
-                        username: item.user.screen_name,
-                        color: item.user.profile_background_color,
-                        profile_img: item.user.profile_image_url
-                    } %}
-                {% else %}
-                    {% set line = {
-                        url: (item.retweeted_status.entities.urls | first).url is not null ? (item.retweeted_status.entities.urls | first).url : "#",
-                        text: item.retweeted_status.text,
-                        username: item.retweeted_status.user.screen_name,
-                        color: item.retweeted_status.user.profile_background_color,
-                        profile_img: item.retweeted_status.user.profile_image_url
-                    } %}
-                {% endif %}
-                <article style="color: #{{ line.color }}">
-                    <a href="{{ line.url }}" >
-                        <figure>
-                            <img src="{{ line.profile_img }}" alt="Timeline image">
-                        </figure>
-                        <footer>
-                            <h2>{{ line.username }}</h2>
-                            <p>{{ line.text }}</p>
-                        </footer>
-                    </a>
-                </article>
-            {% endfor %}
-            <footer>
-                <a href="https://twitter.com/{{ portfolio.twitterUsername }}">Go to profile</a>
-            </footer>
+        <h2>{{ portfolio.name }}'s Timeline</h2>
+        <article class="portfolio__wrapper-timeline">
+            <div class="timeline__container">
+                {% for item in timeline %}
+                    {% if item.entities.urls | length > 0 or item.retweeted_status is not defined %}
+                        {% set line = {
+                            url: (item.entities.urls | first).url is not null ? (item.entities.urls | first).url : "#",
+                            text: item.text,
+                            username: item.user.screen_name,
+                            color: item.user.profile_background_color,
+                            profile_img: item.user.profile_image_url
+                        } %}
+                    {% else %}
+                        {% set line = {
+                            url: (item.retweeted_status.entities.urls | first).url is not null ? (item.retweeted_status.entities.urls | first).url : "#",
+                            text: item.retweeted_status.text,
+                            username: item.retweeted_status.user.screen_name,
+                            color: item.retweeted_status.user.profile_background_color,
+                            profile_img: item.retweeted_status.user.profile_image_url
+                        } %}
+                    {% endif %}
+                    <article class="timeline__item" >
+                        <a class="item__wrapper" href="{{ line.url }}" target="_blank">
+                            <figure class="item__wrapper-img">
+                                <img src="{{ line.profile_img }}" alt="Timeline image">
+                            </figure>
+                            <footer class="item__wrapper-footer">
+                                <h2>{{ line.username }}</h2>
+                                <p>{{ line.text }}</p>
+                            </footer>
+                        </a>
+                    </article>
+                {% endfor %}
+            </div>
         </article>
+        <footer class="portfolio__wrapper-footer">
+            <a target="_blank" href="https://twitter.com/{{ portfolio.twitterUsername }}">Go to profile</a>
+        </footer>
     </section>
-    <aside>
+    <aside class="portfolio__aside">
         <h1>{{ portfolio.name }} {{ portfolio.lastname }}</h1>
-        <section>
+        <figure class="portfolio__aside-img">
+            <img src="{{ portfolio.imagUrl }}" alt="Portfolio image">
+        </figure>
+        <section class="portfolio__aside-info">
             <h2>My Work Experience</h2>
-            <footer>
+            <footer class="aside-info__footer">
                 {{ portfolio.description | raw }}
             </footer>
         </section>

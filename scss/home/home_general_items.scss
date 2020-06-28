@@ -1,45 +1,120 @@
+body{
+  margin: 0;
+}
+h2, h1{
+  color: $blue;
+}
+h1{
+  font-weight: bold;
+}
+h2{
+  font-weight: lighter;
+}
+p{
+  color: $light;
+}
 main{
   display: flex;
   flex-wrap: wrap;
-  >section{
+  font-family: 'Nunito', sans-serif;
+  .portfolio__wrapper{
+    width: 100%;
     justify-content: center;
     display: flex;
     flex-flow: column;
     align-items: center;
-    >figure{
-      >img{
+    .portfolio__wrapper-img{
+      border-radius: 50px;
+      overflow: hidden;
+      img{
         width: 100%;
       }
     }
-    article{
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      article{
-        width: 100%;
-        a{
-          width: 100%;
-          display: flex;
-          align-items: center;
+    .portfolio__wrapper-timeline{
+      overflow-y: scroll;
+      width: 100%;
+      .timeline__container{
+        width: max-content;
+        .timeline__item{
+          background-color: $card;
+          width: 200px;
+          height: 350px;
+          padding: 20px;
+          border-radius: 20px;
+          box-shadow: 0 0 10px 5px $shadow;
+          display: block;
+          float: left;
+          margin: 20px;
+          .item__wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            flex-flow: column;
+            color: $light;
+
+            .item__wrapper-footer{
+              display: flex;
+              justify-content: center;
+              flex-flow: column;
+              align-items: center;
+              h2{
+                margin: 0;
+              }
+              p{
+                line-height: 25px;
+              }
+            }
+          }
         }
       }
     }
+    .portfolio__wrapper-footer{
+      background-color: $gold;
+      padding: 15px 30px;
+      border-radius: 15px;
+      a{
+        color: $darkblue;
+        text-decoration: none;
+
+      }
+    }
   }
-  >aside{
+  .portfolio__aside{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    section{
+    .portfolio__aside-img{
+      overflow: hidden;
+      border-radius: 100%;
+      margin: 0;
+      img{
+        width: 100%;
+      }
+    }
+    .portfolio__aside-info{
       display: flex;
       justify-content: center;
       align-items: center;
       flex-flow: column;
+      padding: 0 30px 30px;
+      .aside-info__footer{
+        color: $blue;
+        font-size: 20px;
+      }
     }
   }
-  >footer{
+  .portfolio__footer{
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 20px;
+    background-color: $gold;
+    a{
+      color: $darkblue;
+      text-decoration: none;
+    }
   }
 }

@@ -1,0 +1,24 @@
+/* Using plain CSS */
+@media (min-width:1200px) {
+  /* hi-res laptops and desktops */
+  main{
+    justify-content: center;
+    flex-wrap: wrap;
+    .portfolio__wrapper{
+      overflow: hidden;
+      flex: 0 1 25%;
+      padding: 20px;
+      .portfolio__wrapper-timeline{
+        .timeline__container{
+          .timeline__item{
+            //float: none;
+          }
+        }
+      }
+    }
+    .portfolio__aside{
+      flex: 1 1 65%;
+      justify-content: end;
+    }
+  }
+}

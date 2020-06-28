@@ -36,6 +36,7 @@ class AppController  extends AbstractController
             ->getQuery()
             ->useQueryCache(true)
             ->getOneOrNullResult();
+
         if($portfolio){
             $twitter = new TwitterZem($portfolio->getTwitterUsername());
             $timeline = $twitter->getTimeLine();
